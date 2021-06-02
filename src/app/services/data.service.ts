@@ -11,4 +11,9 @@ export class DataService {
   getPokemons() {
     return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10');
   }
+
+  // get more datas
+  getMoreData(name: string) {
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
+  }
 }
