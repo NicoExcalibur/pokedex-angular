@@ -6,4 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
   constructor(private http: HttpClient) {}
+
+  // Get pokemons
+  getPokemons() {
+    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=10');
+  }
 }
